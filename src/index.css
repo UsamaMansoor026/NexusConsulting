@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  /* Color Palette */
+  --color-primary: #0d2d3e;
+  --color-pinkish-300: #e94d65;
+  --color-pinkish-400: #eb566c;
+  --color-pinkish-600: #ff2143;
+  --color-white: #fffff0;
+  --color-black: #555d50;
+  --color-actualblack: #000000;
+  --color-dark-blue: #092c3f;
+  --color-card-heading: #1c165c;
+  --color-gray: #57667e;
+  --color-gray-300: #cecece;
+  --color-bluish-300: #0e132a;
+  --color-orangish: #f04e3c;
+  --color-redish: #f52f2f;
+
+  --breakpoint-xsm: 400px;
+  --breakpoint-sm: 560px;
+
+  --font-roboto: "Roboto", serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-sarabun: "Sarabun", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+section {
+  scroll-margin-top: 50px;
+}
+
+@layer utilities {
+  .global-padding {
+    @apply lg:px-12 md:px-20 sm:px-16 xsm:px-5;
+  }
+
+  .service-card {
+    padding: 24px 20px;
+    border-radius: 5px;
+
+    &:hover {
+      box-shadow: 2px 2px 5px 0px var(--color-primary);
+    }
+  }
+}
+
+.slick-next::before,
+.slick-prev::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  font-size: 24px !important;
+  background-color: var(--color-primary);
+}
+
+.slick-prev::before {
+  left: -90px;
+}
+
+@media (max-width: 986px) {
+  .slick-next::before,
+  .slick-prev::before {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    font-size: 16px !important;
+  }
+  .slick-next::before {
+    right: 0px;
+  }
+
+  .slick-prev::before {
+    left: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slick-next::before,
+  .slick-prev::before {
+    display: none;
+  }
+}
