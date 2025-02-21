@@ -26,7 +26,7 @@ const Team = () => {
               </div>
 
               {/* Info */}
-              <div className="py-4 pl-10 font-roboto">
+              <div className="py-4 pl-2 md:pl-10 font-roboto">
                 <h3 className="text-2xl md:text-lg lg:text-2xl text-primary">
                   {member.name}
                 </h3>

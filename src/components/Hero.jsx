@@ -14,7 +14,7 @@ const Hero = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="w-[700px] pl-[30px] lg:pl-[100px] md:pl-[50px]">
+      <div className="w-[700px] pl-[30px] lg:pl-[100px] md:pl-[50px] mb-28 sm:mb-0">
         <motion.div
           initial={{ x: -150, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
